@@ -1,0 +1,230 @@
+﻿
+
+<!-- Pages/Home.razor -->
+@page "/"
+@inherits LayoutComponentBase
+<PageTitle>Home</PageTitle>
+
+<HeadContent>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <title>Home</title>
+</HeadContent>
+
+
+
+<body class="text-white bg-dark ">
+    <nav class="navbar navbar-expand-lg bg-danger">
+        <section class="container-fluid">
+            <div class="navbar-brand mx-auto">
+                <a href="/"><img class="logo1" src="/Fitblaze-logo.png" alt=""  style="border-radius: 50%;"/></a>
+            </div>
+            <div class="navbar-collapse">
+                <section class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" style="font-weight: 700;border-bottom: 2px solid yellow;" href="/">Home</a>
+                    <a class="nav-link active " aria-current="page" 
+                       href="/Portfolio">Portfolio</a>
+                    <a class="nav-link active" aria-current="page" href="/About">About</a>
+                    <a class="nav-link active" aria-current="page" href="/Train">Train</a>
+                    
+                    <section class="btn-wrapper">
+                        <a href="/About" class="btn  btn-warning btn-warning-custom">Contact</a>
+                    </section>
+
+
+                </section>
+            </div>
+        </section>
+    </nav>
+
+    <main class="text-white">
+        <a class="gotopbtn" href="#"> <img src="/icons8-arrow-50.png" alt="Go to top" /> </a><!--Made myself-->
+        <section id="home-1">
+            <section class="main-content">
+                <section class="video-background">
+                    <section class="overlay"></section>
+                    <video autoplay muted loop class="mountain">
+                        <source src="/GYM.mp4" type="video/mp4" />
+                    </video>
+                    <section class="text-content">
+                        <h1>FitBlaze</h1>
+                        <p>
+                            Ignite your potential with FitBlaze, where every step fuels your journey to a stronger, healthier you. Transform sweat into success and let the fire within you shape the path to fitness excellence.
+                        </p>
+                        <button class="btn  btn-danger btn-danger-custom" onclick="scrollToHome4()">
+                            Read more about our services
+                        </button>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section id="home-2" >
+            <section class="container additional-content text-white">
+                <h1>Unleash Your Power: Elevate Your Fitness Journey with FitBlaze</h1>
+                <p>
+                    Fuel Your Fire, Achieve Your Aspirations: Discover How FitBlaze Can Propel You Towards Peak Fitness, Unleashing Endless Possibilities for Health, Strength, and Unstoppable Well-being.
+                    Ignite Your Power, Elevate Your Journey: Join FitBlaze and experience a revolutionary approach to fitness. From personalized plans to expert guidance, discover a community that empowers and supports your every step. Let your potential blaze a trail to strength, health, and unparalleled well-being. Your transformation starts here – embrace the fire within!
+                </p>
+            </section>
+        </section>
+
+        <section id="home-3" >
+            <section class=" third-div bg-danger">
+                <section class="container">
+                    <section class="row third-div-red">
+                        <section class="col-md-4">
+                            <div class="text-center mb-4 mt-3">
+                                <img src="/Fitblaze-logo.png" alt="" class="img-fluid">
+                            </div>
+                        </section>
+
+                        <section class="col-md-8 d-flex flex-column justify-content-center " style="padding:20px;">
+                            <section class="company text-center">
+                                <h3><b>About our company</b></h3>
+                                <p>
+                                    Welcome to FitBlaze, where passion meets progress. Our fitness app is more than a routine; it's a lifestyle revolution. Embrace a community that sparks motivation, ignites determination, and empowers you to conquer your fitness goals. With personalized workouts, expert guidance, and a blazing spirit, we're here to fan the flames of your transformation. Unleash your inner fire and let FitBlaze be the catalyst for your fitness triumphs. Ignite the extraordinary in every workout – because greatness begins with the first step.
+                                </p>
+                                <a href="/About" style="text-decoration: none;">
+                                    <section class="btn-wrapper">
+                                        <button class="btn btn-outline-dark">Read more about us</button>
+                                    </section>
+                                </a>
+
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+        <section id="home-4">
+            <section class="container">
+                <section class="row justify-content-center">
+                    <h1 class="centreclass">Our Services</h1>
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+
+                        <section class="card">
+                            <section class="card-body text-center">
+                                <img src="/Workout-plan.png" alt="" class="users mb-3" />  <!--https://www.flaticon.com/free-icon/group-users_4121044?term=community&page=1&position=9&origin=search&related_id=4121044-->
+
+                                <h3>Personalized Workout Plans</h3>
+                                <p class="card-text">
+                                    Tailored exercise routines based on individual fitness levels, goals, and preferences.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/Recommandation.png" alt="" class="users mb-3" /> <!--https://stock.adobe.com/images/id/586796799?k=upload+on+cloud+icon&clickref=1100lxXsQP6B&mv=affiliate&mv2=Freepik&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=Flaticon&as_content=api&as_audience=404&sdid=6WTV6YJ5&asset_id=586796799-->
+                                <h3>Personalized Recommendations</h3>
+                                <p class="card-text">
+                                    Surveys-driven insights and recommendations based on user behavior, preferences, and goals to enhance the overall fitness experience.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/tracking.png" alt="" class="users mb-3" />        <!--https://icons8.com/icon/11260/source-code-->
+                                <h3>Activity Tracking</h3>
+                                <p class="card-text">
+                                    Tools to monitor and analyze daily physical activity, steps taken, calories burned, and more
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/coaching.png" alt="" class="users mb-3" />    <!--https://www.flaticon.com/search?word=wifi-->
+                                <h3>In-App Coaching and Guidance</h3>
+                                <p class="card-text">
+                                    Access to virtual coaches or trainers who can provide real-time feedback, form correction, and guidance during workouts.t.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+        <section id="home-5">
+            <section style="padding: 5%;" class="bg-danger">
+                <section class="container contact py-5">
+                    <section class="row">
+                        <h1 class="centreclass">Sign Up For our Updated</h1>
+
+                        <section class="container col-6">
+                            <!-- Input group -->
+                            <div class="d-flex justify-content-center">
+                                <div class="input-group w-auto">
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Example input"
+                                           aria-label="Example input"
+                                           aria-describedby="button-addon1" />
+                                    <section class="btn-wrapper">
+                                        <a href="/tests" class="btn  btn-warning btn-warning-custom">Sign Me Up!</a>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
+
+                    </section>
+                </section>
+            </section>
+
+
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <section class="bg-dark py-3 footer-div">
+            <section>
+                <a class="navbar-brand" href="#"><img class="logo1" src="/Fitblaze-logo.png" style="border-radius: 50%;" alt=""></a>
+            </section>
+            <section class="d-flex align-items-center">
+
+                <p style="color: white; padding-left: 15px; margin-bottom: 0; ">Companyrights FitBlaze 2023</p>
+            </section>
+            <section class="social-media">
+                <img src="/facebook.png" alt="" class="users"> <!--https://www.flaticon.com/free-icon/facebook_747374?term=facebook&page=1&position=8&origin=search&related_id=747374-->
+                <img src="/instagram.png" alt="" class="users"><!--https://www.flaticon.com/free-icon/instagram_1384031?term=instagram&page=1&position=5&origin=search&related_id=1384031-->
+                <img src="/linkedin.png" alt="" class="users"><!--https://www.flaticon.com/free-icon/linkedin_2582575?term=linked+in&page=1&position=26&origin=search&related_id=2582575-->
+            </section>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function scrollToHome4() {
+                // Get the target section
+                const home4Section = document.getElementById('home-4');
+
+                // Scroll to the target section
+                home4Section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+
+
+    </footer>
+</body>
+
+        @code{
+  }

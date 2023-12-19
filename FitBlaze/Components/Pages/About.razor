@@ -1,0 +1,263 @@
+﻿@page "/About"
+
+<PageTitle>About</PageTitle>
+<HeadContent>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-wvfXpqpZZVQGKKG+8Y8ep5D6xBxUj5e0pzTYIQ/hj6U9lnjQwYP7Mqz8r7aKx4V" crossorigin="anonymous">
+       <title style="text-decoration-color: white;">About</title>
+    </HeadContent>
+
+ 
+
+<body class="text-white bg-dark">
+ <!-- Pages/Shared/NavBar.razor -->
+    <nav class="navbar navbar-expand-lg bg-danger">
+    <div class="container-fluid">
+        <div class="navbar-brand mx-auto">
+            <NavLink href="/"> <!-- Use NavLink for navigation within Blazor -->
+                    <img class="logo1" src="/Fitblaze-logo.png" alt="" />
+            </NavLink>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/">Home</NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/Portfolio">Portfolio</NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/About" style="font-weight: 700; border-bottom: 2px solid yellow;">About</NavLink>
+
+                </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="/Train">Train</NavLink>
+
+                    </li>
+
+                <li class="nav-item">
+                        <NavLink class="nav-link btn btn-warning btn-warning-custom" href="/About">Contact</NavLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <a class="gotopbtn" href="#"> <img src="/icons8-arrow-50.png" alt="Go to top" /> </a>
+    <section id="about-1">
+        <section class="custom-main-content">
+            <section class="custom-video-background">
+                <section class="row">
+                    <section class="col-7">
+                    </section>
+                    <section class="col-5">
+                        <section class="container mx-3" style="overflow: hidden;">
+                            <section class="card custom-overlay ">
+                                <section class="card-body ourCard">
+                                    <p>FitBlaze</p>
+                                    <h4 style="font-weight: 700;">About Our Company</h4>
+                                    <p>
+                                        "Welcome to FitBlaze, where fitness meets innovation. As a trailblazing company committed to transforming lives, FitBlaze pioneers a holistic approach to wellness. Our cutting-edge fitness app seamlessly combines personalized workouts, expert guidance, and a vibrant community, igniting the spark within each user to unlock their full potential. With FitBlaze, embark on a journey that transcends traditional fitness boundaries, propelling you towards a healthier, stronger, and more empowered version of yourself. Join us in redefining fitness excellence – this is more than an app; it's the future of your well-being."
+                                    </p>
+                                    
+                                        <section class="btn-wrapper">
+                                            <a href="/About" class="btn  btn-warning btn-warning-custom mt-2">Get In Touch With Us</a>
+                                        </section>
+                    
+                                
+                                    </section>
+
+                            </section>
+
+                        </section>
+                    </section>
+                </section>
+                <img src="/about.jpg" class="custom-imgbg" alt="">
+                <section class="custom-text-content">
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+
+    <section id="about-2">
+
+        <section class="container" style="padding:20px;">
+                <section class="row justify-content-center">
+                    <h1 class="centreclass">Our Services</h1>
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+
+                        <section class="card">
+                            <section class="card-body text-center">
+                                <img src="/Workout-plan.png" alt="" class="users mb-3" />  <!--https://www.flaticon.com/free-icon/group-users_4121044?term=community&page=1&position=9&origin=search&related_id=4121044-->
+
+                                <h3>Personalized Workout Plans</h3>
+                                <p class="card-text">
+                                    Tailored exercise routines based on individual fitness levels, goals, and preferences.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/Recommandation.png" alt="" class="users mb-3" /> <!--https://stock.adobe.com/images/id/586796799?k=upload+on+cloud+icon&clickref=1100lxXsQP6B&mv=affiliate&mv2=Freepik&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=Flaticon&as_content=api&as_audience=404&sdid=6WTV6YJ5&asset_id=586796799-->
+                                <h3>Personalized Recommendations</h3>
+                                <p class="card-text">
+                                    Surveys-driven insights and recommendations based on user behavior, preferences, and goals to enhance the overall fitness experience.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/tracking.png" alt="" class="users mb-3" />        <!--https://icons8.com/icon/11260/source-code-->
+                                <h3>Activity Tracking</h3>
+                                <p class="card-text">
+                                    Tools to monitor and analyze daily physical activity, steps taken, calories burned, and more
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <section class="card">
+                            <section class="card-body text-center ">
+                                <img src="/coaching.png" alt="" class="users mb-3" />    <!--https://www.flaticon.com/search?word=wifi-->
+                                <h3>In-App Coaching and Guidance</h3>
+                                <p class="card-text">
+                                    Access to virtual coaches or trainers who can provide real-time feedback, form correction, and guidance during workouts.t.
+                                </p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+
+    <section id="about-3" class="bg-danger">
+        <section class="bg-danger third-div d-flex flex-column align-items-center" style="gap:2rem;">
+            <h1 style="text-align: center; font-weight: 700; margin-top: 20px;">Some of Our Sponsors</h1>
+            <section class="d-flex flex-row justify-content-center" >
+                <section class="card mx-3 services-client client card-body" style="width: 18rem; margin-bottom: 15px; background-color:black;">
+                    <img src="/sponser1.jpg" alt="" style="width: 100%; padding: 10px; margin: 5px;">
+                </section>
+                <section class="card mx-3 services-client client card-body" style="width: 18rem; margin-bottom: 15px; background-color:black;">
+                    <img src="/sponser2.png" alt="" style="width: 100%; padding: 10px; margin: 5px;">
+                </section>
+                <section class="card mx-3 services-client client card-body" style="width: 18rem; margin-bottom: 15px; background-color:black;">
+                    <img src="/sponser3.jpg" alt="" style="width: 100%; padding: 10px; margin: 5px;">
+                </section>
+                <section class="card mx-3 services-client client card-body" style="width: 18rem; margin-bottom: 15px; background-color:black;">
+                    <img src="/sponser4.jpg" alt="" style="width: 100%; padding: 10px; margin: 5px;">
+                </section>
+            </section>
+        </section>
+
+    </section>
+
+
+
+    <section id="about-4">
+        <h1 style="text-align: center; font-weight: 700; margin-top: 20px;">Contact Us</h1>
+        <section class="container contact py-5">
+            <section class="row">
+                <section class="container col-6">
+                    <form>
+                        <label style="font-size: 23px; font-weight: 500;" for="exampleInputEmail1"
+                               class="form-label bg-dark">
+                            Send Us a
+                            Message</label>
+                        <section class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="exampleInputEmail1">
+                        </section>
+                        <section class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1">
+                        </section>
+                        <section class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </section>
+                        <button type="submit" class="btn btn-warning btn-warning-custom">Send Message</button>
+                    </form>
+                </section>
+                <section class="col-6">
+                    <h3 style="font-weight: 700; ">Contact Information</h3>
+                    <p>
+                        "For any inquiries, support, or partnership opportunities, connect with the FitBlaze team. We're here to assist you on your fitness journey and welcome your feedback. Reach out to us via the following channels:
+                    </p>
+                    <section class="info">
+                        <img src="/location.png" class="contacts" alt=""><!--https://www.flaticon.com/free-icon/maps-and-flags_447031?term=location&page=1&position=7&origin=search&related_id=447031-->
+                        <p>Block xyz,Area z,City A,America</p>
+                    </section>
+                    <section class="info">
+                        <img src="/phone-call.png" class="contacts" alt=""><!--https://www.flaticon.com/free-icon/phone-call_3059446?term=phone&page=1&position=5&origin=search&related_id=3059446-->
+                        <p>+92 03005059320</p>
+                    </section>
+                    <section class="info">
+                        <img src="/email.png" class="contacts" alt=""><!--https://www.flaticon.com/free-icon/email_2099199?term=email&page=1&position=6&origin=search&related_id=2099199-->
+                        <a href="#">support@fitblaze.com.</a>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id="about-5">
+        <section class="row">
+            <section class="col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.4416358676514!2d-122.08373968473889!3d37.42214717983614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e4f8e16820d%3A0xb7f8e69f27d184f!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1636410251283!5m2!1sen!2sus" class="responsive-iframe" loading="lazy"  allowfullscreen></iframe>
+                </section>
+
+        </section>
+    </section>
+
+
+    <footer>
+        <section class="bg-dark py-3 footer-div">
+            <section>
+                <a class="navbar-brand" href="#"><img class="logo1" src="/Fitblaze-logo.png" alt=""></a>
+            </section>
+            <section class="d-flex align-items-center">
+
+                <p style="color: white; padding-left: 15px; margin-bottom: 0; ">Companyrights FitBlaze 2023</p>
+            </section>
+            <section class="social-media">
+                <img src="/facebook.png" alt="" class="users"> <!--https://www.flaticon.com/free-icon/facebook_747374?term=facebook&page=1&position=8&origin=search&related_id=747374-->
+                <img src="/instagram.png" alt="" class="users"><!--https://www.flaticon.com/free-icon/instagram_1384031?term=instagram&page=1&position=5&origin=search&related_id=1384031-->
+                <img src="/linkedin.png" alt="" class="users"><!--https://www.flaticon.com/free-icon/linkedin_2582575?term=linked+in&page=1&position=26&origin=search&related_id=2582575-->
+            </section>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function scrollToHome4() {
+                // Get the target section
+                const home4Section = document.getElementById('home-4');
+
+                // Scroll to the target section
+                home4Section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+
+
+    </footer>
+    
+</body>
+
+@code {
+
+}

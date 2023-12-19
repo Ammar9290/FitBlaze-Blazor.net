@@ -1,0 +1,141 @@
+﻿@page "/Signup"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Sign up</PageTitle>
+
+<HeadContent>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <title>Home</title>
+</HeadContent>
+
+<body class="text-white bg-dark">
+    <nav class="navbar navbar-expand-lg bg-danger">
+        <section class="container-fluid">
+            <div class="navbar-brand mx-auto">
+                <a href="/"><img class="logo1" src="/Fitblaze-logo.png" alt="" /></a>
+            </div>
+            <div class="navbar-collapse">
+                <section class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" style="font-weight: 700;border-bottom: 2px solid yellow;" href="/">Home</a>
+                    <a class="nav-link active " aria-current="page" href="/Portfolio">Portfolio</a>
+                    <a class="nav-link active" aria-current="page" href="/About">About</a>
+                    <a class="nav-link active" aria-current="page" href="/Train">Train</a>
+
+                    <section class="btn-wrapper">
+                        <a href="/About" class="btn btn-warning btn-warning-custom">Contact</a>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-danger">
+                    <div class="card-header text-black">
+                        <h4>Sign Up</h4>
+                    </div>
+                   
+                    <div class="card-body">
+                        <form method="post" @onsubmit="RegisterUser" @formname="starship-plain-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label text-black">Name</label>
+                                <input type="text" class="form-control" @bind="user" placeholder="Enter your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-black">Email</label>
+                                <input type="email" class="form-control" @bind="email" placeholder="Enter your email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label text-black">Password</label>
+                                <input type="password" class="form-control" @bind="password" placeholder="Enter your password">
+                            </div>
+
+                            <button type="submit">Sign Up!</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section class="bg-dark py-3 footer-div">
+            <section>
+                <a class="navbar-brand" href="#"><img class="logo1" src="/Fitblaze-logo.png" alt=""></a>
+            </section>
+            <section class="d-flex align-items-center">
+                <p style="color: white; padding-left: 15px; margin-bottom: 0; ">Companyrights FitBlaze 2023</p>
+            </section>
+            <section class="social-media">
+                <img src="/facebook.png" alt="" class="users">
+                <img src="/instagram.png" alt="" class="users">
+                <img src="/linkedin.png" alt="" class="users">
+            </section>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function scrollToHome4() {
+                const home4Section = document.getElementById('home-4');
+                home4Section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    </footer>
+</body>
+
+
+
+
+
+
+
+@code {
+
+    private bool emailError = false;
+    private bool passwordError = false;
+
+
+    string user { get; set; }
+    string password { get; set; }
+    string email { get; set; }
+
+
+    private string confirmPassword = "";
+    private DAL.User userDal = new DAL.User();
+    userModel newuser;
+    public async Task RegisterUser()
+    {
+
+
+
+
+        newuser.Name = user;
+        newuser.Password = password;
+        newuser.Email = email;
+
+
+
+        emailError = false; // Reset error flags on submit
+        passwordError = false;
+
+
+        // Check if email is not already registered
+        userDal.CreateUser(newuser);
+
+            
+            NavigationManager.NavigateTo("/");
+        
+   
+    }
+}
+ 
+
+    
+

@@ -1,0 +1,71 @@
+﻿@page "/tests"
+@rendermode InteractiveServer
+
+<PageTitle>Sign up</PageTitle>
+
+<div class="container mt-5 " >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-danger">
+                <div class="card-header text-black">
+                    <h4>Sign Up</h4>
+                </div>
+                <form method="post" @onsubmit="Submit" @formname="starship-plain-form" >
+                <div class="card-body">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label text-black">Name</label>
+                            <InputText type="text" class="form-control" @bind-Value="user" placeholder="Enter your name" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-black">Email</label>
+                            <InputText type="email" class="form-control" @bind-Value="email" placeholder="Enter your email" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-black">Password</label>
+                            <InputText type="password" class="form-control" @bind-Value="password" placeholder="Enter your password"/>
+                    </div>
+
+                    <button type="submit" >Sign Up!</button>
+
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private bool emailError = false;
+    private bool passwordError = false;
+
+
+    private string user { get; set; }
+    private string password { get; set; }
+    private string email { get; set; }
+
+
+    private string confirmPassword = "";
+    private DAL.User userDal = new DAL.User();
+
+    private userModel userModel { get; set; }
+    protected override void OnInitialized() => userModel ??= new();
+
+
+
+
+    public void Submit()
+    {
+
+        // Check if email is not already registered
+        userModel.Name = user;
+        userModel.Email = email;
+        userModel.Password = password;
+        userDal.CreateUser(userModel);
+
+     
+
+
+    }
+}
+
